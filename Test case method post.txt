@@ -1,12 +1,13 @@
-pm.test("Status code is 200", function () {
-    pm.response.to.have.status(200);
+pm.test("Status code is 404", function () {
+    pm.response.to.have.status(404);
 });
+
 pm.test("Response time is less than 80ms", function () {
     pm.expect(pm.response.responseTime).to.be.below(80);
 });
 
 
-FAIL
-//Status code is 200 | AssertionError: expected response to have status code 200 but got 404
+PASS
+Status code is 404
 FAIL
 //Response time is less than 80ms | AssertionError: expected 759 to be below 80

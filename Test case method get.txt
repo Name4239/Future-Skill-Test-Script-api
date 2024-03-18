@@ -2,5 +2,19 @@ pm.test("Status code is 200", function () {
     pm.response.to.have.status(200);
 });
 
-// PASS
-// Status code is 200
+pm.test("Status code name has string", function () {
+    pm.response.to.have.status("OK");
+});
+
+pm.test("Content-Type is present", function () {
+    pm.response.to.have.header("Content-Type");
+});
+
+PASS
+Status code is 200
+
+PASS
+Status code name has string
+
+PASS
+Content-Type is present
